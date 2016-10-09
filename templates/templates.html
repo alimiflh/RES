@@ -1,0 +1,35 @@
+ 	<div ng-controller="ctrl">
+			<h1>my app</h1>
+			<div>
+				נא  לרשום שם עובד :
+			<input ng-model="name" placeholder=" נא לרשום שם עובד"  ng-model="nameInput"/>
+			{{name}}
+			</div>
+	<hr>
+	<div>
+		יש לבחור מספר שולחן :
+				<input placeholder=" נא לרשום מספר שולחן" type="number" min="1" max="20" ng-model="numberTable"/>
+				</div>
+			<button ng-click="saveData()">
+				Send
+			</button>
+			<button ng-click="getData()">Show Data</button>
+		
+		
+			<div ng-repeat="worker in employe">
+				{{worker.firstName}}
+				{{worker.lastName}}
+
+			</div>
+			<ul ng-repeat="worker in employe" ng-click="dataclick(worker.firstName)">
+				<li>
+					{{worker.firstName}}
+					{{worker.lastName}}
+				</li>
+			</ul>
+
+	
+<dir>
+	
+</dir>
+		</div>
