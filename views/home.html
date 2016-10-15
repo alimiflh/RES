@@ -1,0 +1,8 @@
+
+<h1>Home</h1>
+<select ng-options="p as p.name for p in persons" 
+ng-model="selected">
+</select>
+<a ng-href="#/contactus/{{selected.name}}/{{selected.age}}">go to contact us with person</a>
+
+

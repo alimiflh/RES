@@ -2,48 +2,43 @@ body {
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background: rgba(168,255,225,1);
-	background: -moz-linear-gradient(-45deg, rgba(168,255,225,1) 0%, rgba(255,255,255,1) 42%, rgba(247,254,251,1) 96%, rgba(246,254,251,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(168,255,225,1)), color-stop(42%, rgba(255,255,255,1)), color-stop(96%, rgba(247,254,251,1)), color-stop(100%, rgba(246,254,251,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(168,255,225,1) 0%, rgba(255,255,255,1) 42%, rgba(247,254,251,1) 96%, rgba(246,254,251,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(168,255,225,1) 0%, rgba(255,255,255,1) 42%, rgba(247,254,251,1) 96%, rgba(246,254,251,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(168,255,225,1) 0%, rgba(255,255,255,1) 42%, rgba(247,254,251,1) 96%, rgba(246,254,251,1) 100%);
-	background: linear-gradient(135deg, rgba(168,255,225,1) 0%, rgba(255,255,255,1) 42%, rgba(247,254,251,1) 96%, rgba(246,254,251,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8ffe1', endColorstr='#f6fefb', GradientType=1 );
-}
-.img {
-	background-image: url(../img/1070049_500289180054938_2045821301_n.jpg);
+	background-image: url(../img/utensils.jpg);
 }
 .nav-pills {
 	float: right;
 }
-.h1 {
+.title {
 	text-align: center;
+	color:#fff;
 }
 p {
 	padding: 50px;
 	font-size: 32px;
 	font-weight: bold;
 	text-align: center;
-	background: #dbdfe5;
+	
 }
-video#bgvid {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	opacity: 1;
-	width: auto;
-	height: auto;
-	z-index: -100;
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	background: url(polina.jpg) no-repeat;
-	background-size: cover;
+.dessets {
+	list-style:none;
+	font-size: 200%;
+	text-align: center;
+	color:black;
+    float: left;
+   
+}
+.dessets ul{
+	float: left;
+	
+}
+.dessets li{
+	float: left;
+	margin-left : 5px;
+}
+.dessets img{
+	display: inline;
+	margin: 5px;
+	width: 381px;
+    height: 200px;
+    margin-left : 5px;
+	
 }
