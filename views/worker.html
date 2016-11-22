@@ -1,20 +1,15 @@
-		<h2>Login</h2>
-			<div>
-				<label><b>Username</b></label>
-				<input type="text" placeholder="Enter Username" name="uname" required>
-
-				<label><b>Password</b></label>
-				<input type="password" placeholder="Enter Password" name="psw" required>
-
-				<button type="submit">
-					Login
-				</button>
-				<input type="checkbox" checked="checked">
-				Remember me
-			</div>
-	<button type="button">
-				Login
-			</button>
-			<button ng-href="#home" type="button">
-				Cancel
-			</button>
+<div class="form-group has-success has-feedback" ng-controller="logonctrl"  >
+	
+	<form  id="myLogin">
+		Username:
+		<input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status"  id="username" ng-model="uname"/>
+		<br>
+		Password:
+		<input type="password"  class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status" id="password" ng-model="password"/>
+		<br>
+		<button type="button"  class="btn btn-default" type="submit" ng-click="submit()" id="navhide">
+			Login
+		</button>
+	</form>
+</div>
+	

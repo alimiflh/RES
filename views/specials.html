@@ -1,16 +1,17 @@
-<div  ng-controller="ctrl1" >
+<div  ng-controller="logonctrl" >
 
 			<nav >
 				
 				<div>
-					<ul class="dessets"   ng-controller="ctrl1">
+					<ul class="dessets"   >
 						<li ng-repeat="specials in specials"  >
 							<a class="thumbnail" ng-href="{{specials.img}}">{{specials.name}}</a>
-							<img  class="thumbnail" ng-src="{{specials.img}}" />
+							<img class="img-circle"  ng-src="{{specials.img}}" />
 						<hr>
 						</li>
 					</ul>
 			</nav>
 			
 		</div>
+	</div>
 		

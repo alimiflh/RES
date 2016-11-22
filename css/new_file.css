@@ -1,5 +1,10 @@
+*{
+	margin: 0  auto;
+	
+}
+
 body {
-	width: 900px;
+	width:80% ;
 	margin-left: auto;
 	margin-right: auto;
 	background-image: url(../img/utensils.jpg);
@@ -12,18 +17,19 @@ body {
 	color:#fff;
 }
 p {
-	padding: 50px;
+	color:#FFFFFF;
 	font-size: 32px;
 	font-weight: bold;
 	text-align: center;
 	
 }
 .dessets {
+	    padding-left: 10%;
+	margin:0 auto;
 	list-style:none;
 	font-size: 200%;
 	text-align: center;
-	color:black;
-    float: left;
+    
    
 }
 .dessets ul{
@@ -41,4 +47,58 @@ p {
     height: 200px;
     margin-left : 5px;
 	
+}
+
+.btn-group-vertical{
+	width: 100%;
+}
+
+ .title2 {
+	padding=0px;
+}
+.slider {
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+}
+.slider a{
+	text-align: center;
+	font-size: 200%;
+	
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+.po {
+    display:block;
+      width: 40%;
+    background-image: url(../img/926.jpg);
 }

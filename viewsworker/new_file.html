@@ -1,0 +1,53 @@
+<div  ng-controller="logonctrl" >
+
+	<p class="title2">
+		בחר מספר שולחן
+	</p>
+	<div class="input-group">
+		<span class="input-group-addon" id="basic-addon1">מספר שולחן</span>
+		<input type="number" class="form-control" placeholder="מספר שולחן" max="5" min="1" ng-model="numTable" aria-describedby="basic-addon1">
+	</div>
+	<hr>
+
+	<div ng-controller="logonctrl"  >
+		<div class="btn-group-vertical" class="well" >
+			<P class="title2">
+				עיקריות
+			</P>
+			<hr>
+			<div   ng-repeat="food in dessets" class="well" >
+
+				<button  class="fa fa-caret-square-o-up"  ng-click="clickFoodup(food.name)" aria-hidden="true"></button>
+				<button class="fa fa-caret-square-o-down"   ng-click="clickFooddown(food.name)" aria-hidden="true"></button>
+				{{food.name}}
+
+				<br>
+			</div>
+
+			<hr>
+			<P class="title2">
+				קינוחים
+			</P>
+			<hr>
+			<div ng-repeat="food in specials"   class="well" >	
+					<button  class="fa fa-caret-square-o-up"  ng-click="clickFoodup(food.name)" aria-hidden="true"></button>
+					<button class="fa fa-caret-square-o-down"   ng-click="clickFooddown(food.name)" aria-hidden="true"></button>
+					{{food.name}}
+					<br>
+			</div>
+			<!-- </div>
+			<button  class="btn btn-default " ng-repeat="food in specials" ng-click="clickFood(food.name)">
+			{{food.name}}
+			</button>
+			</div> -->
+
+			<div>
+				<button class="fa fa-chevron-left  fa-3x" aria-hidden="true" >
+					חזור
+				</button>
+				<button class="fa fa-chevron-right fa-3x " aria-hidden="true" ng-click="order()">
+					המשך
+				</button>
+			</div>
+
+		</div>

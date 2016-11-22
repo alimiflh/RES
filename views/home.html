@@ -1,8 +1,14 @@
-
-<h1>Home</h1>
-<select ng-options="p as p.name for p in persons" 
-ng-model="selected">
-</select>
-<a ng-href="#/contactus/{{selected.name}}/{{selected.age}}">go to contact us with person</a>
-
-
+<div  ng-controller="logonctrl"  >
+	<div  class="slider">
+	<ul>
+		<li ng-repeat="dessets in dessets" class="food" >
+			<img  class="img-circle" width=80% height=80% ng-src="{{dessets.img}}" />
+			<a class="btn-group btn-group-justified" role="group" ng-href="{{dessets.img}}">{{dessets.name}}</a>
+			</li>
+			<li ng-repeat="specials in specials" >
+			<img ng-click="{{specials.img}}" class="img-circle" width=80% height=80% ng-src="{{specials.img}}" />
+			<a class="btn-group btn-group-justified" role="group" ng-href="{{specials.img}}">{{specials.name}}</a>
+			</li>
+	</ul>
+	</div>
+	</div>
