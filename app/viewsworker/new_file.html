@@ -1,24 +1,29 @@
 <div  ng-controller="logonctrl" >
 
-	<p class="title2">
+	<p  class="title2">
 		בחר מספר שולחן
 	</p>
-	<div class="input-group">
+	<div  class="input-group">
 		<span class="input-group-addon" id="basic-addon1">מספר שולחן</span>
 		<input type="number" class="form-control" placeholder="מספר שולחן" max="5" min="1" ng-model="numTable" aria-describedby="basic-addon1">
 	</div>
 	<hr>
+	
+ <div>
+ 	<p class="title2">כתוב הודעה כללית</p> 
+ 	<textarea class="textarea" ng-model="data1.text" ></textarea>  </div>
+  
 
 	<div ng-controller="logonctrl"  >
-		<div class="btn-group-vertical" class="well" >
+		<div class="viewmeals" class="btn-group-vertical" class="well" >
 			<P class="title2">
 				עיקריות
 			</P>
 			<hr>
 			<div   ng-repeat="food in dessets" class="well" >
 
-				<button  class="fa fa-caret-square-o-up"  ng-click="clickFoodup(food.name)" aria-hidden="true"></button>
-				<button class="fa fa-caret-square-o-down"   ng-click="clickFooddown(food.name)" aria-hidden="true"></button>
+				<button  class="fa fa-caret-square-o-up"  ng-click="clickFoodup(food.name) ; clickorder(numTable)" aria-hidden="true"></button>
+				<button class="fa fa-caret-square-o-down"   ng-click="clickFooddown(food.name) ; clickorder(numTable)" aria-hidden="true"></button>
 				{{food.name}}
 
 				<br>
@@ -30,8 +35,8 @@
 			</P>
 			<hr>
 			<div ng-repeat="food in specials"   class="well" >	
-					<button  class="fa fa-caret-square-o-up"  ng-click="clickFoodup(food.name)" aria-hidden="true"></button>
-					<button class="fa fa-caret-square-o-down"   ng-click="clickFooddown(food.name)" aria-hidden="true"></button>
+					<button  class="fa fa-caret-square-o-up"  ng-click="clickFoodup(food.name) ; clickorder(numTable)" aria-hidden="true"></button>
+					<button class="fa fa-caret-square-o-down"   ng-click="clickFooddown(food.name) ; clickorder(numTable) " aria-hidden="true"></button>
 					{{food.name}}
 					<br>
 			</div>
@@ -42,12 +47,22 @@
 			</div> -->
 
 			<div>
-				<button class="fa fa-chevron-left  fa-3x" aria-hidden="true" >
-					חזור
-				</button>
+		
 				<button class="fa fa-chevron-right fa-3x " aria-hidden="true" ng-click="order()">
 					המשך
 				</button>
 			</div>
-
+			</div>
+			
+<div class="vieworder"    ng-repeat="(key , order) in orderform" >
+	<div >
+<p>
+	{{key}} : {{order}}
+	</p>
+	</div>
 		</div>
+	</div>
+	</div>
+	
+	
+		

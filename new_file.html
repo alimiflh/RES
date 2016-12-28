@@ -2,28 +2,32 @@
 <html ng-app="app">
 	<head>
 		<meta charset="utf-8" />
-		<link href="bootstrap/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="app/bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="app/bootstrap/css/bootstrap.css" rel="stylesheet" />
 		<link href="css/new_file.css" type="text/css" rel="stylesheet" />
-<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+		<script src="js/angular.js"></script>
+		<script src="js/angular-route/angular-route.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/route.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.1.0/angularfire.js"></script>
 
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey : "AIzaSyBTyt5x8nWkkef9B5HwDm-6-RsE3iJMxpQ",
+				authDomain : "pro-restaurant.firebaseapp.com",
+				databaseURL : "https://pro-restaurant.firebaseio.com",
+				storageBucket : "pro-restaurant.appspot.com",
+				messagingSenderId : "29680576077"
+			};
+			firebase.initializeApp(config);
+		</script>
 	</head>
 	<body>
-		<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBTyt5x8nWkkef9B5HwDm-6-RsE3iJMxpQ",
-    authDomain: "pro-restaurant.firebaseapp.com",
-    databaseURL: "https://pro-restaurant.firebaseio.com",
-    storageBucket: "pro-restaurant.appspot.com",
-    messagingSenderId: "29680576077"
-  };
-  firebase.initializeApp(config);
-</script>
-		<div  ng-controller="logonctrl">
-			
-			<nav >
-				<h1 class="title">{{name}}</h1>
+		<div  ng-controller="logonctrl" >
+			<nav>
+				<img class="logo" src="img/ALI.jpg" />
 				<div>
 					<ul  class="nav nav-tabs nav-justified"  ng-controller="logonctrl">
 						<li ng-repeat="c in routeData"   class="nav nav-pills nav-justified">
@@ -33,18 +37,15 @@
 			</nav>
 			<br>
 		</div>
-		<div>	
-		<ng-view></ng-view>
+		<div>
+			<ng-view></ng-view>
 		</div>
-			<script src="js/angular.js"></script>
-			<script src="js/angular-route/angular-route.js"></script>
-			<script src="js/config.js"></script>
-			<script src="bootstrap/jquery-3.1.1.min.js"></script>
-			<script src="js/route.js"></script>
-			<script src="bootstrap/js/bootstrap.js"></script>
-			<script src="controller/controller.js"></script>
-			<!-- <script src="controller/ctrl1.js"></script> -->
-			<script src="controller/directive.js"></script>
+
+		<script src="app/bootstrap/jquery-3.1.1.min.js"></script>
+		<script src="app/bootstrap/js/bootstrap.js"></script>
+		<script src="app/controller/controller.js"></script>
+		<script src="app/controller/directive.js"></script>
+
 	</body>
 
 </html>

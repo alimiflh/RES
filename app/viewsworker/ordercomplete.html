@@ -1,0 +1,31 @@
+<div  ng-controller="logonctrl" >
+
+	<p class="title2">
+		בחר מספר שולחן
+	</p>
+	<div class="input-group">
+
+		<span class="input-group-addon" id="basic-addon1">מספר שולחן</span>
+		<br>
+
+		<input type="number" class="form-control" placeholder="מספר שולחן" max="5" min="1" ng-model="numTable" aria-describedby="basic-addon1">
+
+	</div>
+	<button ng-click="clickorder(numTable)">
+		clickorder
+	</button>
+	<P class="title2">
+	הערות מיוחדות להזמנה:
+		{{data1.text}}
+	</P>
+
+	<div class="po">
+		<div  ng-repeat="(key , order) in orderform" >
+			<div >
+				<p>
+					{{key}} : {{order}}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
